@@ -8,6 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
+| v1.8.0 | [`v1.8.0`](https://github.com/chainguard-actions/test-room-7-action-update-file/tree/v1.8.0) | [`8b81150`](https://github.com/test-room-7/action-update-file/commit/8b811502e37e2dcf6e8f80c712cd81e735be6e1c) |
 | v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/test-room-7-action-update-file/tree/v2.0.0) | [`be6fb6d`](https://github.com/test-room-7/action-update-file/commit/be6fb6d9c59d5ec4b56542f2e8ad2516a99e3402) |
 
 ## Privacy
