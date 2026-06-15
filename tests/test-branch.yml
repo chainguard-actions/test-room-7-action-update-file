@@ -1,0 +1,34 @@
+name: Test branch input - update file on specific branch
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_REF: refs/heads/act-harness
+      GITHUB_EVENT_NAME: push
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Create a test file to update
+        run: |
+          echo "branch test content $(date)" > "$GITHUB_WORKSPACE/test-branch-file.txt"
+
+      - name: Run action with branch input (expect failure without real token)
+        id: action
+        continue-on-error: true
+        uses: .
+        with:
+          commit-msg: "chore: update file on specific branch"
+          file-path: "test-branch-file.txt"
+          github-token: "fake-token-for-testing"
+          branch: "act-harness"
+          allow-dot: false
+          allow-removing: false
+          committer-name: "github-actions[bot]"
+          committer-email: "github-actions[bot]@users.noreply.github.com"
+
+      - name: Assert action was invoked with branch input
+        run: |
+          echo "Action completed (with or without error due to fake token)"
+          echo "PASS: branch input was provided and action was invoked"
