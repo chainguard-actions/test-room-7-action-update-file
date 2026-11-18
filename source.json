@@ -4,8 +4,13 @@
   "version": "v2.0.0",
   "commit_sha": "be6fb6d9c59d5ec4b56542f2e8ad2516a99e3402",
   "url": "https://github.com/test-room-7/action-update-file",
-  "policy_sha": "d636be7e43ef829af6e853da6b3c7566db9f72fe",
+  "policy_sha": "374911c4be584df24e6da57af2d990570ef0f859",
   "test_policy_sha": "843adf9e4b8f85d0c08b27b9d0b09dd094b54702",
-  "test_agent_version": "1",
-  "harden_agent_version": "1"
+  "test_agent_version": "2",
+  "harden_agent_version": "2",
+  "dist_artifact": {
+    "gcs_uri": "gs://patch-actions-node-artifacts/dist-artifacts/test-room-7/action-update-file/v2.0.0/sha256-24abc7d7d87b6d82d55cc4a982ce0ebb0e3ad62d50172a62d320c4fd63a6c23f.tar.gz",
+    "sha256": "24abc7d7d87b6d82d55cc4a982ce0ebb0e3ad62d50172a62d320c4fd63a6c23f",
+    "size_bytes": 191180
+  }
 }
